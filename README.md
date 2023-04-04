@@ -1,9 +1,10 @@
 # SQPSGBO
 Source code of "SQPSGBO:Low-Cost Big Data Performance Optimization of Spark SQL Applications"
-2.6.3、result文件夹
-存放判断敏感query所必须的数据
-2.7、VSGNet-BO文件夹
-2.7.1、run.sh
+
+
+VSGNet-BO文件夹
+
+run.sh
 自动化优化脚本，调用该脚本将进行自动化优化，最终将结果输出到$TOOL_HOME/VSGNet-BO/config
 目录下。脚本参数为(benchmark-size, type, defalut_runtime)
 示例：
@@ -15,7 +16,8 @@ VSGNet根据当前最优配置生成的相似配置信息，SnetConfig存放VSGN
 存放搜索过程中每个样本的相关信息，output.txt记录失败配置的信息，如果该文件为空表示搜索过程
 中没有失败配置，target.png描绘搜索样本性能提升过程，横坐标对应样本的迭代次数，纵坐标对应性
 能指标，config*为每个样本对应的配置文件
-2.7.2、changeFileContent.py
+
+changeFileContent.py
 作用：修改杀死超时配置中的超时时间（以 s 为单位）
 用法：
 file_path = '$TOOL_HOME\common/errorDetection\shutDowonDetection-terasort.sh'
@@ -38,7 +40,7 @@ benchmark-size：基准测试程序-数据集，例如wordcount-20G，redis-SS1_
 type：基准测试程序类型（wordcount和terasort填hibench，tpcds填tpcds，redis填redis）
 defalut_runtime：默认配置执行时间（这个参数需要先手动跑默认配置得出执行时间后才能进行设
 置）
-1 2 32.7.4、config文件夹
+config文件夹
 存放调优算法过程中产生的配置文件和输出文件
 内容介绍：
 dataset/ 存放配置失败后VSGNet根据当前最优配置生成的相似配置信息
@@ -48,7 +50,9 @@ logs.json bo算法的输出数据，存放搜索过程中每个样本的相关�
 output.txt 记录失败配置的信息，如果该文件为空表示搜索过程中没有失败配置
 target.png 描绘搜索样本性能提升过程，横坐标对应样本的迭代次数，纵坐标对应性能指标
 confign 每个样本对应的配置文件
-2.7.5、bayes_scode文件夹
+
+
+bayes_scode文件夹
 ganinbo_Bayesian_Optimization.py搜索过程中调用的辅助文件
 内容介绍：
 configuration.py 所有文件中使用的argparse参数都统一存放在这个文件中。
