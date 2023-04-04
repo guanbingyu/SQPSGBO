@@ -1,0 +1,15 @@
+
+2021-12-20 11:25:09
+训练时长0m0s
+使用算法: lgb
+0.036742684487905575
+9
+spark.reducer.maxReqsInFlight: 39.0
+spark.kryoserializer.buffer: 35.0
+spark.reducer.maxBlocksInFlightPerAddress: 28.0
+spark.executor.instances: 22.0
+spark.memory.offHeap.size: 21.0
+spark.shuffle.file.buffer: 19.0
+spark.executor.memoryOverhead: 16.0
+spark.locality.wait: 11.0
+spark.memory.fraction: 9.0

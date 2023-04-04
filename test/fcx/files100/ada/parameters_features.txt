@@ -1,0 +1,12 @@
+
+2021-12-20 11:25:17
+训练时长0m3s
+使用算法: ada
+0.008985262044830552
+6
+spark.memory.storageFraction: 0.5761365390903292
+spark.memory.fraction: 0.16483245514845998
+spark.executor.memory: 0.1131983367508473
+spark.executor.cores: 0.0707949352867663
+spark.executor.instances: 0.04254985058167082
+spark.memory.offHeap.size: 0.03248788314192638

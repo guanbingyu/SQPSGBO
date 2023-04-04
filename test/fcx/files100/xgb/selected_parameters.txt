@@ -1,0 +1,11 @@
+vital_params
+spark.memory.storageFraction
+spark.executor.cores
+spark.executor.instances
+spark.broadcast.compress
+spark.locality.wait
+spark.memory.offHeap.size
+spark.reducer.maxSizeInFlight
+spark.executor.memoryOverhead
+spark.reducer.maxBlocksInFlightPerAddress
+spark.default.parallelism

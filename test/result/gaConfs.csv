@@ -1,0 +1,18 @@
+func,n_dim,size_pop,max_iter,prob_mut,lb,ub,precision,searchDuration
+<function black_box_function at 0x000002CD30E27550>,10,30,20,0.01,"[0.5, 1.0, 2.0, 2.0, 1073741823.0, 200.0, 24.0, 384.0, 1073741823.0, 1.0]","[0.9, 4.0, 8.0, 8.0, 2147483647.0, 500.0, 72.0, 877.0, 2147483647.0, 10.0]","[0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]",3
+func,n_dim,size_pop,max_iter,prob_mut,lb,ub,precision,searchDuration
+<function black_box_function at 0x000001F0DEC06550>,10,30,20,0.01,"[0.5, 1.0, 2.0, 2.0, 1073741823.0, 200.0, 24.0, 384.0, 1073741823.0, 1.0]","[0.9, 4.0, 8.0, 8.0, 2147483647.0, 500.0, 72.0, 877.0, 2147483647.0, 10.0]","[0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]",1
+func,n_dim,size_pop,max_iter,prob_mut,lb,ub,precision,searchDuration
+<function black_box_function at 0x00000211F9357550>,10,30,20,0.01,"[0.5, 1.0, 2.0, 2.0, 1073741823.0, 200.0, 24.0, 384.0, 1073741823.0, 1.0]","[0.9, 4.0, 8.0, 8.0, 2147483647.0, 500.0, 72.0, 877.0, 2147483647.0, 10.0]","[0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]",1
+func,n_dim,size_pop,max_iter,prob_mut,lb,ub,precision,searchDuration
+<function black_box_function at 0x000001FD6F1C6550>,10,30,20,0.01,"[0.5, 1.0, 2.0, 2.0, 1073741823.0, 200.0, 24.0, 384.0, 1073741823.0, 1.0]","[0.9, 4.0, 8.0, 8.0, 2147483647.0, 500.0, 72.0, 877.0, 2147483647.0, 10.0]","[0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]",1
+func,n_dim,size_pop,max_iter,prob_mut,lb,ub,precision,searchDuration
+<function black_box_function at 0x00000216E2E26550>,10,30,20,0.01,"[0.5, 1.0, 2.0, 2.0, 1073741823.0, 200.0, 24.0, 384.0, 1073741823.0, 1.0]","[0.9, 4.0, 8.0, 8.0, 2147483647.0, 500.0, 72.0, 877.0, 2147483647.0, 10.0]","[0.01, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]",1
+func,n_dim,size_pop,max_iter,prob_mut,lb,ub,precision,searchDuration
+<function black_box_function at 0x00000157FA506550>,6,30,20,0.01,"[0.5, 0.5, 2.0, 1.0, 2.0, 512.0]","[0.9, 0.9, 8.0, 4.0, 8.0, 1024.0]","[0.01, 0.01, 1.0, 1.0, 1.0, 1.0]",1
+func,n_dim,size_pop,max_iter,prob_mut,lb,ub,precision,searchDuration
+<function black_box_function at 0x000002841F2A39D0>,6,30,20,0.01,"[0.5, 0.5, 2.0, 1.0, 2.0, 512.0]","[0.9, 0.9, 8.0, 4.0, 8.0, 1024.0]","[0.01, 0.01, 1.0, 1.0, 1.0, 1.0]",4
+func,n_dim,size_pop,max_iter,prob_mut,lb,ub,precision,searchDuration
+<function black_box_function at 0x0000016C5C7765E0>,6,40,20,0.1,"[0.5, 0.5, 2.0, 1.0, 2.0, 512.0]","[0.9, 0.9, 8.0, 4.0, 8.0, 1024.0]","[0.01, 0.01, 1.0, 1.0, 1.0, 1.0]",2
+func,n_dim,size_pop,max_iter,prob_mut,lb,ub,precision,searchDuration
+<function black_box_function at 0x00000145439955E0>,6,40,20,0.1,"[0.5, 0.5, 2.0, 1.0, 2.0, 512.0]","[0.9, 0.9, 8.0, 4.0, 8.0, 1024.0]","[0.01, 0.01, 1.0, 1.0, 1.0, 1.0]",2

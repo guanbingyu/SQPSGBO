@@ -1,0 +1,8 @@
+vital_params
+spark.memory.storageFraction
+spark.memory.fraction
+spark.executor.memory
+spark.executor.cores
+spark.executor.instances
+spark.memory.offHeap.size
+spark.default.parallelism
