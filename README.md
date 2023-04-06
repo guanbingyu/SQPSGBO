@@ -24,7 +24,7 @@ VSGNet根据当前最优配置生成的相似配置信息，SnetConfig存放VSGN
 file_path = '$TOOL_HOME\common/errorDetection\shutDowonDetection-terasort.sh'
 stop_time = 50000
 changeStopTime(file_path, stop_time)
-changeChmod755(file_path)\
+changeChmod755(file_path) \
 
 ### ganinbo_Bayesian_Optimization.py
 作用：对特定基准的配置参数进行寻优，拉丁超立方采样3个初始样本和VSGnet生成3个初始样本（共6
