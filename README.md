@@ -70,4 +70,4 @@ observer.py 观察当前event的状态进行通知logger执行对应操作。\
 logger.py 将bo搜索过程的样本详细信息存入logs.json中。\
 CSGNet.py 训练神经网络及生成配置\
 model.py 神经网络结构\
-Dataset.py 处理输入到神经网络的数据格式及构建训练集\
+Dataset.py 处理输入到神经网络的数据格式及构建训练集
