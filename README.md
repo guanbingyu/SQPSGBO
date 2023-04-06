@@ -6,10 +6,11 @@ Source code of "SQPSGBO:Low-Cost Big Data Performance Optimization of Spark SQL 
 
 run.sh
 自动化优化脚本，调用该脚本将进行自动化优化，最终将结果输出到$TOOL_HOME/VSGNet-BO/config
-目录下。脚本参数为(benchmark-size, type, defalut_runtime)
+目录下。脚本参数为(benchmark-size, type, defalut_runtime)\
+\
 示例：
 $TOOL_HOME/VSGNet-BO/run.sh wordcount-20G hibench 257.824\
-上述命令将优化wordcount-20G。（下面用到的finishTime代表运行结束时间）输出结果在\
+上述命令将优化wordcount-20G。（下面用到的finishTime代表运行结束时间）输出结果在
 $TOOL_HOME/VSGNet-BO/config/wordcount-20G-finishTime/目录中，dataset存放配置失败后
 VSGNet根据当前最优配置生成的相似配置信息，SnetConfig存放VSGNet产生的所有初始样本配置文
 件，generationConf.csv存放搜索过程中的所有样本配置参数信息，logs.json记录bo算法的输出数据，
