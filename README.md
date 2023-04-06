@@ -57,7 +57,7 @@ confign 每个样本对应的配置文件/
 
 
 ### bayes_scode文件夹
-ganinbo_Bayesian_Optimization.py搜索过程中调用的辅助文件
+#### ganinbo_Bayesian_Optimization.py 搜索过程中调用的辅助文件
 内容介绍：
 configuration.py 所有文件中使用的argparse参数都统一存放在这个文件中。
 LHS_sample.py 根据参数个数和范围进行拉丁超立方采样。
