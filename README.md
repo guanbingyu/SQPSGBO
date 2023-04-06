@@ -24,7 +24,7 @@ VSGNet根据当前最优配置生成的相似配置信息，SnetConfig存放VSGN
 file_path = '$TOOL_HOME\common/errorDetection\shutDowonDetection-terasort.sh'
 stop_time = 50000
 changeStopTime(file_path, stop_time)
-changeChmod755(file_path) \
+changeChmod755(file_path)/
 
 ### ganinbo_Bayesian_Optimization.py
 作用：对特定基准的配置参数进行寻优，拉丁超立方采样3个初始样本和VSGnet生成3个初始样本（共6
@@ -45,15 +45,15 @@ defalut_runtime：默认配置执行时间（这个参数需要先手动跑默�
 
 ### config文件夹
 
-存放调优算法过程中产生的配置文件和输出文件内容介绍：/
+存放调优算法过程中产生的配置文件和输出文件内容介绍：\
 
-dataset- 存放配置失败后VSGNet根据当前最优配置生成的相似配置信息/
-SnetConfig- VSGNet产生的所有初始样本配置文件/
-generationConf.csv 存放搜索过程中的所有样本配置参数信息/
-logs.json bo算法的输出数据，存放搜索过程中每个样本的相关信息/
-output.txt 记录失败配置的信息，如果该文件为空表示搜索过程中没有失败配置/
-target.png 描绘搜索样本性能提升过程，横坐标对应样本的迭代次数，纵坐标对应性能指标/
-confign 每个样本对应的配置文件/
+dataset- 存放配置失败后VSGNet根据当前最优配置生成的相似配置信息\
+SnetConfig- VSGNet产生的所有初始样本配置文件\
+generationConf.csv 存放搜索过程中的所有样本配置参数信息\
+logs.json bo算法的输出数据，存放搜索过程中每个样本的相关信息\
+output.txt 记录失败配置的信息，如果该文件为空表示搜索过程中没有失败配置\
+target.png 描绘搜索样本性能提升过程，横坐标对应样本的迭代次数，纵坐标对应性能指标\
+confign 每个样本对应的配置文件\
 
 
 ### bayes_scode文件夹
