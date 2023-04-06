@@ -59,17 +59,17 @@ confign 每个样本对应的配置文件/
 ### bayes_scode文件夹
 ganinbo_Bayesian_Optimization.py 搜索过程中调用的辅助文件\
 内容介绍：\
-configuration.py 所有文件中使用的argparse参数都统一存放在这个文件中。/
-LHS_sample.py 根据参数个数和范围进行拉丁超立方采样。/
+configuration.py 所有文件中使用的argparse参数都统一存放在这个文件中。\
+LHS_sample.py 根据参数个数和范围进行拉丁超立方采样。\
 bayesian_optimization.py 创建贝叶斯优化和高斯过程对象。使用VSGnet生成初始样本。根据
 target_space.py返回值判断当前配置成功/失败，配置成功则继续探索，否则根据最优样本使用VSGnet
-生成相似样本并运行。判断当前配置的优化到达5倍则停止搜索。/
+生成相似样本并运行。判断当前配置的优化到达5倍则停止搜索。\
 target_space.py 运行当前的探索样本，将样本注册到hashset中，同时向返回样本的性能值和执行成
-功/失败结果。/
-util.py 使用高斯过程回归实现贝叶斯优化过程，根据当前已有样本空间选择下一个探索样本。/
-event.py 存放当前bo搜索的状态。开始搜索、搜索过程、结束搜索。/
-observer.py 观察当前event的状态进行通知logger执行对应操作。/
-logger.py 将bo搜索过程的样本详细信息存入logs.json中。/
-Snet.py 训练神经网络及生成配置/
-model.py 神经网络结构/
-Dataset.py 处理输入到神经网络的数据格式及构建训练集/
+功/失败结果。\
+util.py 使用高斯过程回归实现贝叶斯优化过程，根据当前已有样本空间选择下一个探索样本。\
+event.py 存放当前bo搜索的状态。开始搜索、搜索过程、结束搜索。\
+observer.py 观察当前event的状态进行通知logger执行对应操作。\
+logger.py 将bo搜索过程的样本详细信息存入logs.json中。\
+Snet.py 训练神经网络及生成配置\
+model.py 神经网络结构\
+Dataset.py 处理输入到神经网络的数据格式及构建训练集\
