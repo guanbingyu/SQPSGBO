@@ -1,17 +1,15 @@
 # SQPSGBO
 Source code of "SQPSGBO:Low-Cost Big Data Performance Optimization of Spark SQL Applications"
 
-## 
-## VSGNet-BO文件夹
 
 ### run.sh
 自动化优化脚本，调用该脚本将进行自动化优化，最终将结果输出到$TOOL_HOME/VSGNet-BO/config
 目录下。脚本参数为(benchmark-size, type, defalut_runtime)\
 \
 示例：
-$TOOL_HOME/VSGNet-BO/run.sh wordcount-20G hibench 257.824\
+$TOOL_HOME/SQPSGBO/run.sh wordcount-20G hibench 257.824\
 上述命令将优化wordcount-20G。（下面用到的finishTime代表运行结束时间）输出结果在
-$TOOL_HOME/VSGNet-BO/config/wordcount-20G-finishTime/目录中，dataset存放配置失败后
+$TOOL_HOME/SQPSGBO/config/wordcount-20G-finishTime/目录中，dataset存放配置失败后
 VSGNet根据当前最优配置生成的相似配置信息，SnetConfig存放VSGNet产生的所有初始样本配置文
 件，generationConf.csv存放搜索过程中的所有样本配置参数信息，logs.json记录bo算法的输出数据，
 存放搜索过程中每个样本的相关信息，output.txt记录失败配置的信息，如果该文件为空表示搜索过程
@@ -26,7 +24,7 @@ stop_time = 50000
 changeStopTime(file_path, stop_time)
 changeChmod755(file_path)/
 
-### ganinbo_Bayesian_Optimization.py
+### BO_DAF.py
 作用：对特定基准的配置参数进行寻优，拉丁超立方采样3个初始样本和VSGnet生成3个初始样本（共6
 个初始样本），使用贝叶斯和VSGnet迭代寻优的方式搜索该基准的最优配置参数，若当前配置运行成功
 则继续使用贝叶斯优化获取下一探索样本，并把kill超时配置的超时时间改为最优配置的5倍。若配置运
@@ -57,9 +55,9 @@ confign 每个样本对应的配置文件\
 
 
 ### bayes_scode文件夹
-ganinbo_Bayesian_Optimization.py 搜索过程中调用的辅助文件\
+BO_DAF.py 搜索过程中调用的辅助文件\
 内容介绍：\
-configuration.py 所有文件中使用的argparse参数都统一存放在这个文件中。\
+configuration.py 所有文件中使用的超参数都统一存放在这个文件中。\
 LHS_sample.py 根据参数个数和范围进行拉丁超立方采样。\
 bayesian_optimization.py 创建贝叶斯优化和高斯过程对象。使用VSGnet生成初始样本。根据
 target_space.py返回值判断当前配置成功/失败，配置成功则继续探索，否则根据最优样本使用VSGnet
@@ -70,6 +68,6 @@ util.py 使用高斯过程回归实现贝叶斯优化过程，根据当前已有
 event.py 存放当前bo搜索的状态。开始搜索、搜索过程、结束搜索。\
 observer.py 观察当前event的状态进行通知logger执行对应操作。\
 logger.py 将bo搜索过程的样本详细信息存入logs.json中。\
-Snet.py 训练神经网络及生成配置\
+CSGNet.py 训练神经网络及生成配置\
 model.py 神经网络结构\
 Dataset.py 处理输入到神经网络的数据格式及构建训练集\
