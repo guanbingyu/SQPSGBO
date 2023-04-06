@@ -57,8 +57,8 @@ confign 每个样本对应的配置文件/
 
 
 ### bayes_scode文件夹
-ganinbo_Bayesian_Optimization.py 搜索过程中调用的辅助文件/
-内容介绍：/
+ganinbo_Bayesian_Optimization.py 搜索过程中调用的辅助文件\
+内容介绍：\
 configuration.py 所有文件中使用的argparse参数都统一存放在这个文件中。/
 LHS_sample.py 根据参数个数和范围进行拉丁超立方采样。/
 bayesian_optimization.py 创建贝叶斯优化和高斯过程对象。使用VSGnet生成初始样本。根据
