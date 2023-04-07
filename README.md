@@ -31,10 +31,12 @@ changeChmod755(file_path)\
 行失败则将配置性能设置为最优配置的10倍（redis则设置为最优配置的1/5），同时选择下一探索样本
 时不采用高斯过程回归而是使用VSGnet根据最优样本生成一个近似样本作为下一探索样本，VSGnet通
 过这种方式指导贝叶斯优化的搜索过程。若当前配置的优化配置是默认配置的5倍则提前停止搜索，否则
-直到满足指定的搜索次数为止。/
+直到满足指定的搜索次数为止。
+
 用法：python3 ganinbo_Bayesian_Optimization.py --benchmark=$1 --initpoints=$initNumber --
 gan_initpoints=$ganinits --niters=$interationsNumber --csv_toconfig=$path/SnetConfig/ --
-default_runtime=$3/
+default_runtime=$3
+
 参数说明：
 benchmark-size：基准测试程序-数据集，例如wordcount-20G，redis-SS1_10
 type：基准测试程序类型（wordcount和terasort填hibench，tpcds填tpcds，redis填redis）
