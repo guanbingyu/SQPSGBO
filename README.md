@@ -1,43 +1,43 @@
 # SQPSGBO
 Source code of "SQPSGBO:Low-Cost Big Data Performance Optimization of Spark SQL Applications"
 
-## SensQuery文件夹
+## SensQuery folder
 
 Code to search for CSQS
 
 ### run.sh
-自动化探测敏感query，在$TOOL_HOME/SensQuery/result/目录下输出判断敏感query所必须的数
-据。脚本参数为(size, num)\
+Automatically detect sensitive queries and output the number necessary to determine the CSQ in the $TOOL_HOME/SensQuery/result/ directory
+According to. The script argument is (size, num)\
 
-示例：
+For example：
 $TOOL_HOME/SensQuery/run.sh 21G 30\
-上述命令将会对tpcds-21G进行敏感query的探测。（下面用到的finishTime代表运行结束时间）输出结
-果在$TOOL_HOME/SensQuery/result/tpcds-21G-finishTime文件夹中，该文件中的config为探测敏感
-query过程中运行的配置，runtime为每个配置对应的执行时间，其他文件含义就如文件名描述所示，
-query的pearson相关系数.csv，query的spearman相关系数.csv，pearson相关性高的query.txt（相关
-系数大于0.75为相关性高，每行用'&'进行连接的query为相关性高的query），spearman相关性高的
-query.txt，query配置对应执行时间相关统计量.csv，query配置对应执行时间.csv\
+
+The above command will probe tpcds-21G for CSQ. (The finish time used below is the end of the run time. )
+The output in the $TOOL_HOME/SensQuery/result/TPCDS - 21 g - finishTime folder and the config file for detection sensitivity 
+query the configuration to run during the process. The runtime is the execution time corresponding to each configuration.
+query's Pearson correlation coefficient.csv, query's Spearman correlation coefficient.csv, Pearson correlation high Query.txt (correlation 
+A coefficient greater than 0.75 is considered highly correlated, queries joined with '&' in each row are considered highly correlated), and Spearman's correlation is high Query.txt, query configuration for execution time-related statistics.csv, query configuration for execution time.csv\
  
 ### calculate.py
 
-调用该脚本计算query相关数据，输出判断敏感query所必须的数据
+Calling this script computes the data related to the query and outputs the data necessary to judge the sensitive query.
 
-参数说明：
-示例：
+Parameter Description：
+For example：
 python3 $TOOL_HOME/SensQuery/calculate.py -b=1 -e=30 -
 p=$TOOL_HOME/data/runtime/tpcds/tpcds-21G -c=$TOOL_HOME/SensQuery/result/tpcds-21G
-上述命令将使用$TOOL_HOME/data/runtime/tpcds/tpcds-21G目录中的执行时间数据计算出判断敏感
-query所必须的数据，将其存放在$TOOL_HOME/SensQuery/result/tpcds-21G中
-size：tpcds数据量大小，如21G、300G等
-num：跑多少个配置用来收集判断敏感query所需的数据，推荐设置为30
+The above command will use $TOOL_HOME/data/runtime/TPCDS/TPCDS directory - 21 g execution time data to calculate the judgment Necessary to query data, its stored in $TOOL_HOME/SensQuery/result/TPCDS - 21 g
 
--b：执行时间文件编号的开始序号
--e：执行时间文件编号的结束序号
--p：执行时间文件存放目录
--c：结果输出目录
+size：data size of tpcds,like 21G、300G.
+num：30 is the recommended number of Settings to run to collect the data needed to determine a CSQ.
 
-### result文件夹
-存放判断敏感query所必须的数据
+-b：The start sequence number of the execution time file number.
+-e：The end sequence number of the execution time file number.
+-p：The directory in which the execution time files are stored.
+-c：The resulting output directory.
+
+### result folder
+Stores data necessary to judge sensitive queries
 
 
 ## SQPSGBO Method
@@ -45,9 +45,10 @@ num：跑多少个配置用来收集判断敏感query所需的数据，推荐设
 Our proposed search method
 
 ### run.sh
-自动化优化脚本，调用该脚本将进行自动化优化，最终将结果输出到$TOOL_HOME/VSGNet-BO/config
-目录下。脚本参数为(benchmark-size, type, defalut_runtime)\
-\
+The automated optimization script, which will run the automated optimization and output the results to $TOOL_HOME/CSGNet-BO/config 
+Directory. Script parameters are (benchmark-size, type, and defalut_runtime)\
+
+
 示例：
 $TOOL_HOME/SQPSGBO/run.sh wordcount-20G hibench 257.824\
 上述命令将优化wordcount-20G。（下面用到的finishTime代表运行结束时间）输出结果在
