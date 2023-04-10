@@ -38,7 +38,7 @@ num：跑多少个配置用来收集判断敏感query所需的数据，推荐设
 存放判断敏感query所必须的数据
 
 
-## SQPSGBO
+## SQPSGBO Method
 
 ### run.sh
 自动化优化脚本，调用该脚本将进行自动化优化，最终将结果输出到$TOOL_HOME/VSGNet-BO/config
