@@ -1,13 +1,13 @@
 # SQPSGBO
 Source code of "SQPSGBO:Low-Cost Big Data Performance Optimization of Spark SQL Applications"
 
-##SensQuery文件夹
+## SensQuery文件夹
 
-###run.sh
+### run.sh
 自动化探测敏感query，在$TOOL_HOME/SensQuery/result/目录下输出判断敏感query所必须的数
 据。脚本参数为(size, num)\
 
-示例：\
+示例：
 $TOOL_HOME/SensQuery/run.sh 21G 30\
 上述命令将会对tpcds-21G进行敏感query的探测。（下面用到的finishTime代表运行结束时间）输出结
 果在$TOOL_HOME/SensQuery/result/tpcds-21G-finishTime文件夹中，该文件中的config为探测敏感
@@ -34,7 +34,7 @@ num：跑多少个配置用来收集判断敏感query所需的数据，推荐设
 -p：执行时间文件存放目录
 -c：结果输出目录
 
-###result文件夹
+### result文件夹
 存放判断敏感query所必须的数据
 
 
