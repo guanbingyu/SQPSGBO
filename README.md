@@ -15,8 +15,8 @@ query过程中运行的配置，runtime为每个配置对应的执行时间，�
 query的pearson相关系数.csv，query的spearman相关系数.csv，pearson相关性高的query.txt（相关
 系数大于0.75为相关性高，每行用'&'进行连接的query为相关性高的query），spearman相关性高的
 query.txt，query配置对应执行时间相关统计量.csv，query配置对应执行时间.csv\
-
-###calculate.py
+ 
+### calculate.py
 
 调用该脚本计算query相关数据，输出判断敏感query所必须的数据
 
@@ -38,7 +38,7 @@ num：跑多少个配置用来收集判断敏感query所需的数据，推荐设
 存放判断敏感query所必须的数据
 
 
-
+## SQPSGBO
 
 ### run.sh
 自动化优化脚本，调用该脚本将进行自动化优化，最终将结果输出到$TOOL_HOME/VSGNet-BO/config
